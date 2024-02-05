@@ -17,6 +17,8 @@ import { FooterComponent } from './models/components/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './models/components/pages/about/about.component';
+import { ContactComponent } from './models/components/pages/contact/contact.component';
+import { HomeComponent } from './models/components/pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { AboutComponent } from './models/components/pages/about/about.component'
     HeaderComponent,
     FooterComponent,
     AboutComponent,
+    ContactComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

@@ -197,7 +197,7 @@ input[matEndDate] {
 
 .search-button {
   background-color: transparent;
-  color: #ff9f00;
+  color: #271e12;
   font-size: 24px;
   cursor: pointer;
   transition: color 0.3s;
@@ -210,7 +210,7 @@ input[matEndDate] {
 /* Stiluri pentru butonul de hotel (hotel-button) */
 .hotel-button {
   background-color: transparent;
-  color: #ff9f00;
+  color: #271e12;
   font-size: 24px;
   cursor: pointer;
   transition: color 0.3s;
@@ -219,7 +219,7 @@ input[matEndDate] {
 /* Stiluri pentru butonul de hotel (hotel-button) */
 .calendar-button {
   background-color: transparent;
-  color: #ff9f00;
+  color: #271e12;
   font-size: 24px;
   cursor: pointer;
   transition: color 0.3s;
@@ -251,7 +251,7 @@ input[matEndDate] {
 /* Stilizare pentru butonul de persoană (iconiță cu persoană) */
 .human-button {
   background-color: transparent;
-  color: #ff9f00;
+  color: #271e12;
   font-size: 24px;
   cursor: pointer;
   transition: color 0.3s;
@@ -337,9 +337,9 @@ select {
 
 /* Stilizare pentru bara de instrumente cu culoarea primara */
 .mat-toolbar[color="primary"] {
-  background-color: #6d9aae;
+  background-color: #aa75259a;
   /* Fundal alb */
-  border: 5px solid #ffdb58;
+  border: 5px solid #271e12;
   /* Bordura galbena */
   color: #000000;
   /* Text negru */
@@ -347,7 +347,7 @@ select {
 
 /* Stilizare pentru bara de instrumente personalizată */
 .custom-toolbar {
-  background-color: #0074b8;
+  background-color: #6e8590;
   /* Culoarea de fundal (albastru) */
   color: #fff;
   /* Culoarea textului (alb) */
@@ -365,11 +365,3 @@ select {
   /* Tranzitii pentru culori la hover */
 }
 
-.custom-toolbar:hover {
-  background-color: #005c99;
-  /* Culoarea de fundal la hover (albastru mai închis) */
-  color: #ffcc00;
-  /* Culoarea textului la hover (galben) */
-  cursor: pointer;
-  /* Cursor de mână la hover */
-}

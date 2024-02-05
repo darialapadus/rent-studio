@@ -4,10 +4,7 @@ body {
     background-color: #f4f5f7;
 }
 
-.title-about {
 
-    font-weight: bolder;
-}
 
 *,
 *:before,
@@ -15,9 +12,17 @@ body {
     box-sizing: inherit;
 }
 
+.caption-slide {
+    background-color: #aa75259a;
+    color: #20190f;
+    width: 50%;
+    margin: auto;
+
+}
+
 .column {
     float: left;
-    width: 33.33%;
+    width: 33.3%;
     margin-bottom: 16px;
     padding: 0 8px;
 }
@@ -27,10 +32,11 @@ body {
     margin: 8px;
 }
 
-.about-section {
+.contact-section {
     padding: 50px;
     text-align: center;
     background-color: #f4f5f7;
+
 }
 
 .container {
@@ -44,28 +50,8 @@ body {
     display: table;
 }
 
-.caption-slide {
-    background-color: #aa75259a;
-    color: #20190f;
-    width: 50%;
-    margin: auto;
-    height: 55px;
-}
-
-.button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: #271e12;
-    background-color: #aa7525;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-}
-
-.button:hover {
-    background-color: #555;
+.title-contact {
+    font-weight: bolder;
 }
 
 @media screen and (max-width: 650px) {
@@ -78,4 +64,11 @@ body {
 .row {
     margin: auto;
     width: 90%;
+}
+
+.row .column {
+    margin: auto;
+    width: 30%;
+
+
 }
