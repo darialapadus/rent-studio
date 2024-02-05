@@ -1,0 +1,46 @@
+.title {
+    color: white;
+}
+
+.citat {
+    font-size: small;
+}
+
+.logo {
+    width: 100px;
+}
+
+.bg-dark {
+    background-color: #01070a;
+    /* Culoarea de fundal (albastru) */
+    padding: 20px;
+    /* Spațiu intern pentru conținut */
+    color: #fff;
+    /* Culoarea textului (alb) */
+    font-size: 24px;
+    /* Mărimea textului mai mică */
+    font-weight: bold;
+    /* Textul bold */
+    padding: 10px 20px;
+    /* Reducerea spațiului intern */
+    display: flex;
+    /* Așezare flexibilă a elementelor */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Umbră sub bara de instrumente */
+    transition: background-color 0.3s, color 0.3s;
+    /* Tranzitii pentru culori la hover */
+}
+
+.title {
+    font-size: 24px;
+    /* Mărimea textului pentru titlu */
+    font-weight: bold;
+    /* Textul bold pentru titlu */
+}
+
+.citat {
+    font-style: italic;
+    /* Text italic pentru citat */
+    color: #f0ad4e;
+    /* Culoarea textului pentru citat */
+}

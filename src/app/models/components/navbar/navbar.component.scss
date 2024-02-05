@@ -1,0 +1,375 @@
+// Definiții variabile pentru navbar
+
+// Culori
+$primary-color: #2a68ab; // Exemplu de culoare primară
+$dark-color: #343a40; // Culoare închisă pentru text sau fundal
+$light-color: #f8f9fa; // Culoare deschisă pentru text sau fundal
+$link-hover-color: #2365ab; // Culoare pentru hover-ul link-urilor
+$nav-dark-bg: $dark-color; // Culoare de fundal pentru navbar în modul închis
+$nav-light-bg: $light-color; // Culoare de fundal pentru navbar în modul deschis
+
+// Spațieri
+$nav-padding-y: .5rem; // Padding vertical pentru navbar
+
+.navbar {
+  padding-top: $nav-padding-y;
+  padding-bottom: $nav-padding-y;
+  background-color: $nav-dark-bg;
+
+  .navbar-brand {
+    color: $light-color;
+
+    &:hover {
+      color: lighten($light-color, 10%);
+    }
+  }
+
+  .nav-link {
+    color: $light-color;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+
+  .navbar-toggler {
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='$light-color' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  }
+}
+
+// Schimbă tema navbar pentru ecrane mici
+@media (max-width: 576px) {
+  .navbar {
+    background-color: $nav-light-bg;
+
+    .nav-link,
+    .navbar-brand {
+      color: $dark-color;
+    }
+  }
+}
+
+.nav-link {
+  transition: color .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+/* Stilizare pentru componenta de interval de date */
+.mat-form-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Restul stilurilor rămân neschimbate */
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Stilizare pentru eticheta intervalului de date */
+.mat-label {
+  font-size: 14px;
+  /* Mărimea textului etichetei */
+}
+
+/* Stilizare pentru intrarea de început */
+input[matStartDate] {
+  width: 45%;
+  /* Lățimea intrării de început */
+  padding: 10px;
+  /* Spațiu intern pentru conținut */
+  border: 1px solid #ccc;
+  /* Bordură subțire */
+  border-radius: 4px;
+  /* Colțuri rotunjite */
+  font-size: 14px;
+  /* Mărimea textului */
+  margin-left: auto;
+
+}
+
+/* Stilizare pentru intrarea de sfârșit */
+input[matEndDate] {
+  width: 45%;
+  /* Lățimea intrării de sfârșit */
+  padding: 10px;
+  /* Spațiu intern pentru conținut */
+  border: 1px solid #ccc;
+  /* Bordură subțire */
+  border-radius: 4px;
+  /* Colțuri rotunjite */
+  font-size: 14px;
+  /* Mărimea textului */
+  margin-right: auto;
+
+}
+
+/* Stilizare pentru sugestia de format */
+/* Stilizare îmbunătățită pentru sugestia de format */
+.mat-hint {
+  font-size: 12px;
+  /* Mărimea textului sugestiei */
+  color: #666;
+  /* Culoarea textului sugestiei, un gri mai moale */
+  margin-top: 5px;
+  /* Spațiu de sus pentru separare */
+  margin-bottom: 10px;
+  /* Spațiu de jos pentru separare */
+  font-style: italic;
+  /* Stilul fontului pentru a indica că este o sugestie */
+  display: block;
+  /* Asigură că elementul ocupă propria linie */
+  text-align: right;
+  /* Aliniază textul la dreapta */
+  opacity: 0.7;
+  /* Face textul puțin mai transparent pentru a nu concura cu informațiile principale */
+  padding-right: 10px;
+  /* Padding la dreapta pentru a nu lipi de marginea chenarului */
+}
+
+
+/* Stilizare pentru butonul de afișare a calendarului */
+.mat-datepicker-toggle {
+  background-color: #f0f0f0;
+  /* Fundalul butonului */
+  color: #333;
+  /* Culoarea textului butonului */
+  border: 1px solid #ccc;
+  /* Bordură subțire */
+  border-radius: 4px;
+  /* Colțuri rotunjite */
+  padding: 5px 10px;
+  /* Spațiu intern */
+  cursor: pointer;
+  /* Cursor de mână la hover */
+
+  /* Aliniere pe orizontală în centrul containerului */
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+/* Stilizare pentru calendar */
+.mat-datepicker-content {
+  background-color: #fff;
+  /* Fundalul calendarului */
+  border: 1px solid #ccc;
+  /* Bordură subțire */
+  border-radius: 4px;
+  /* Colțuri rotunjite */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Umbră sub calendar */
+}
+
+/* Stilizare pentru selectarea datei */
+.mat-calendar-body-selected {
+  background-color: #007bff;
+  /* Culoarea de fundal pentru data selectată */
+  color: #fff;
+  /* Culoarea textului pentru data selectată */
+}
+
+/* Stilizare pentru săgețile de navigare ale calendarului */
+.mat-calendar-previous-button,
+.mat-calendar-next-button {
+  color: #007bff;
+  /* Culoarea săgeților de navigare */
+  font-size: 16px;
+  /* Mărimea săgeților de navigare */
+}
+
+.search-button {
+  background-color: transparent;
+  color: #ff9f00;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.mat-button {
+  font-size: 16px;
+}
+
+/* Stiluri pentru butonul de hotel (hotel-button) */
+.hotel-button {
+  background-color: transparent;
+  color: #ff9f00;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Stiluri pentru butonul de hotel (hotel-button) */
+.calendar-button {
+  background-color: transparent;
+  color: #ff9f00;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.search-button:hover {
+  color: #005c99;
+}
+
+.hotel-button:hover {
+  color: #005c99;
+}
+
+.calendar-button:hover {
+  color: #005c99;
+}
+
+/* Stilizare pentru textul cu selecțiile de adulți, copii și camere */
+.mat-toolbar span {
+  font-size: 16px;
+}
+
+/* Stilizare pentru butonul de meniu (iconiță cu meniu) */
+.example-icon {
+  font-size: 24px;
+  color: #fff;
+}
+
+/* Stilizare pentru butonul de persoană (iconiță cu persoană) */
+.human-button {
+  background-color: transparent;
+  color: #ff9f00;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Stilizare pentru butonul de persoană la hover */
+.human-button:hover {
+  color: #005c99;
+}
+
+/* Stilizare pentru containerul cu selecțiile de adulți, copii și camere */
+.mat-toolbar div {
+  margin-top: 20px;
+}
+
+/* Stilizare pentru etichetele selectoarelor */
+label {
+  font-size: 14px;
+  color: #333;
+  margin-right: 10px;
+}
+
+/* Stilizare pentru selecția adulților, copiilor și camerelor */
+select {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Stilizare pentru sugestia de format */
+.mat-hint {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Stilizare pentru containerul cu selecțiile de adulți, copii și camere */
+.selection-container {
+  background-color: #fff;
+  /* Fundalul casetei */
+  border: 1px solid #ccc;
+  /* Bordură subțire */
+  border-radius: 4px;
+  /* Colțuri rotunjite */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Umbră sub caseta */
+  margin-top: 10px;
+  /* Spațiu de sus pentru separare */
+  padding: 10px;
+  /* Spațiu intern */
+  text-align: center;
+  /* Aliniere pe centrul containerului */
+  z-index: 9999;
+  /* Z-index mare pentru a fi peste alte elemente */
+
+}
+
+/* Stilizare pentru fiecare selecție individuală */
+.selection-item {
+  display: inline-block;
+  margin: 0 20px;
+  /* Spațiu între selecții */
+}
+
+/* Stilizare pentru etichetele selectoarelor */
+.selection-item label {
+  font-size: 14px;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+  /* Spațiu de jos pentru separare */
+}
+
+/* Stilizare pentru selectoare */
+.selection-item select {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Stilizare pentru bara de instrumente cu culoarea primara */
+.mat-toolbar[color="primary"] {
+  background-color: #6d9aae;
+  /* Fundal alb */
+  border: 5px solid #ffdb58;
+  /* Bordura galbena */
+  color: #000000;
+  /* Text negru */
+}
+
+/* Stilizare pentru bara de instrumente personalizată */
+.custom-toolbar {
+  background-color: #0074b8;
+  /* Culoarea de fundal (albastru) */
+  color: #fff;
+  /* Culoarea textului (alb) */
+  font-size: 50px;
+  /* Mărimea textului, a fost mărită la 50px */
+  font-weight: bold;
+  /* Textul bold */
+  padding: 20px 30px;
+  /* Spațiu intern pentru conținut */
+  display: flex;
+  /* Așezare flexibilă a elementelor */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Umbră sub bara de instrumente */
+  transition: background-color 0.3s, color 0.3s;
+  /* Tranzitii pentru culori la hover */
+}
+
+.custom-toolbar:hover {
+  background-color: #005c99;
+  /* Culoarea de fundal la hover (albastru mai închis) */
+  color: #ffcc00;
+  /* Culoarea textului la hover (galben) */
+  cursor: pointer;
+  /* Cursor de mână la hover */
+}

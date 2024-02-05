@@ -1,0 +1,97 @@
+<p>
+  <mat-toolbar color="primary">
+
+    <button mat-button>Unde călătoriți?</button>
+    <input matInput *ngIf="showSearch" [(ngModel)]="searchQuery" placeholder="Caută...">
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="hotel-button" aria-label="Example icon-button with bed icon"
+      (click)="showSearch = !showSearch">
+      <mat-icon>hotel</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Data de check-in - Data de check-out</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="calendar-button" aria-label="Example icon-button with calendar icon"
+      (click)="showDateRangePicker = !showDateRangePicker">
+      <mat-icon>calendar_today</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <ng-template [ngIf]="showDateRangePicker">
+    <mat-form-field>
+      <mat-label>Enter a date range</mat-label>
+      <mat-date-range-input [rangePicker]="picker">
+        <input matStartDate placeholder="Start date">
+        <input matEndDate placeholder="End date">
+      </mat-date-range-input>
+      <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+
+  </ng-template>
+
+</p>
+
+<p>
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>{{ numAdults }} adulți · {{ numChildren }} copii · {{ numRooms }} camere</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="human-button" aria-label="Example icon-button with human icon"
+      (click)="showSelections = !showSelections">
+      <mat-icon>person</mat-icon>
+    </button>
+
+    <!-- Afișarea selecțiilor când se activează showSelections -->
+    <div *ngIf="showSelections" class="selection-container">
+      <!-- Numărul de persoane -->
+      <div>
+        <label for="numAdults">Adulți:</label>
+        <select id="numAdults" [(ngModel)]="numAdults">
+          <option *ngFor="let i of adultsOptions" [value]="i">{{ i }} adult{{ i !== 1 ? 'i' : '' }}</option>
+        </select>
+      </div>
+
+
+      <div>
+        <label for="numChildren">Copii:</label>
+        <select id="numChildren" [(ngModel)]="numChildren">
+          <option *ngFor="let i of childrenOptions" [value]="i">{{ i }} {{ i !== 1 ? 'copii' : 'copil' }}</option>
+        </select>
+      </div>
+
+
+      <div>
+        <label for="numRooms">Camere:</label>
+        <select id="numRooms" [(ngModel)]="numRooms">
+          <option *ngFor="let i of roomsOptions" [value]="i">{{ i }} {{ i !== 1 ? 'camere' : 'camera' }}</option>
+        </select>
+      </div>
+
+
+    </div>
+  </mat-toolbar>
+</p>
+
+<p>
+  <mat-toolbar style="background-color: #0074b8; color: #fff;">
+    <button mat-button>Cautare</button>
+    <input matInput *ngIf="showSearchGlobal" [(ngModel)]="searchQuery" placeholder="Caută...">
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="search-button" aria-label="Example icon-button with search icon"
+      (click)="showSearchGlobal = !showSearchGlobal">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
